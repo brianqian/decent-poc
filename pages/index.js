@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Hero from '../components/Hero';
 
 const Home = () => (
   <div>
@@ -12,7 +13,7 @@ const Home = () => (
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     </Head>
 
-    <main>Hello world</main>
+    <Hero />
   </div>
 );
 

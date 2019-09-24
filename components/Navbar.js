@@ -14,17 +14,18 @@ const Nav = styled.nav`
     width: 150px;
   }
   a {
+    font-size: 16px;
     transition: 0.2s ease-in;
     :hover {
       color: ${(props) => props.theme.color.red};
     }
     &.sign-in-button {
-      border: 1px solid ${(props) => props.theme.color.black};
+      border: 1.5px solid ${(props) => props.theme.color.black};
       border-radius: 20px;
       padding: 6px 30px;
       :hover {
         background-color: ${(props) => props.theme.color.red};
-        border: 1px solid ${(props) => props.theme.color.red};
+        border: 1.5px solid ${(props) => props.theme.color.red};
         color: ${(props) => props.theme.color.black};
       }
     }
@@ -42,7 +43,11 @@ const NavItem = styled.div`
 
 const Navbar = () => (
   <Nav>
-    <img src="/static/Decent_com.webp" alt="" />
+    <Link href="/">
+      <a>
+        <img src="/static/Decent_com.webp" alt="" />
+      </a>
+    </Link>
     <NavItem>
       <Link href="">
         <a>Plans</a>
@@ -64,7 +69,7 @@ const Navbar = () => (
       </Link>
     </NavItem>
     <NavItem>
-      <Link href="">
+      <Link href="/login">
         <a className="sign-in-button">Sign In</a>
       </Link>
     </NavItem>
